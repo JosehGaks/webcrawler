@@ -18,4 +18,7 @@ class Encript {
         this.inputText = inputText;
 
     }
+    public void setKey(int key) {
+        this.key = key;
+    }
 }
