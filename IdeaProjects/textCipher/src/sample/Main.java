@@ -46,6 +46,10 @@ public abstract class Cipher extends Application{
         display.setMinSize(500,100);
         display.setMaxSize(500,100);
 
+        //encrypt button
+        Button en = new Button();
+        en.setText("encrypt");
+
     }
 }
 
