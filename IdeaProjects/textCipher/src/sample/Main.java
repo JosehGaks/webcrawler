@@ -18,7 +18,16 @@ public abstract class Cipher extends Application{
     private Encript encript = new Encript("", 0);
 
     @Override
-    public void start(Stage stage) {}
+    public void start(Stage stage) {
+
+        //Input textfield
+        TextField inputText = new TextField();
+        inputText.setMinSize(500,100);
+        inputText.setMaxSize(500,100);
+        inputText.setPromptText("Enter text here");
+
+
+    }
 }
 
 public static void main(String[] args) {
