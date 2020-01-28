@@ -62,6 +62,12 @@ public abstract class Cipher extends Application{
             }
         });
 
+        //HBox
+        HBox inputComponent = new HBox(10);
+        inputComponent.setAlignment(Pos.CENTER);
+        inputComponent.getChildren().addAll(inputLabel,inputText,key,keyLabel);
+
+
     }
 }
 
