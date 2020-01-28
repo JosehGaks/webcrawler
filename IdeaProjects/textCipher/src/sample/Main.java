@@ -80,7 +80,7 @@ public abstract class Cipher extends Application{
 
 
     }
-}
+
 
 public static void main(String[] args) {
 

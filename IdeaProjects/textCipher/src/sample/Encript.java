@@ -53,4 +53,36 @@ class Encript {
 
 
     }
+    public String decrypt() {
+        String output="";
+
+        char c;
+
+        for(int i=0;i < inputText.length();i++) {
+            c = inputText.charAt(i);
+
+            if(c >= 'a' && c <= 'z') {
+                c = (char)(c - key);
+                if(c > 'z') {
+                    c=(char)(c+'z' - 'a' +1);
+
+                }
+                output += c;
+            }
+            else if(c >= 'A' && c <= 'Z') {
+                c = (char)(c - key);
+                if( c >= 'Z') {
+                    c = (char)(c+'Z'- 'A'+1);
+                }
+                output += c;
+            }
+
+            else {
+                output += c;
+            }
+        }
+        return output;
+
+
+    }
 }
