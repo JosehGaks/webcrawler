@@ -35,6 +35,10 @@ public abstract class Cipher extends Application{
         key.setMaxWidth(27);
         key.setPromptText("Enter key");
         key.setMaxWidth(100);
+
+        //label
+        Label keyLabel = new Label("key");
+        inputLabel.setFont(Font.font("Arial", 20));
     }
 }
 
