@@ -16,6 +16,9 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 public abstract class Cipher extends Application{
     private Encript encript = new Encript("", 0);
+
+    @Override
+    public void start(Stage stage) {}
 }
 
 public static void main(String[] args) {
