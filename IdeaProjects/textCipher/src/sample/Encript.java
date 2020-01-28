@@ -8,4 +8,7 @@ class Encript {
         this.key = key;
         this.inputText = inputText;
     }
+    public String getInput() {
+        return inputText;
+    }
 }
