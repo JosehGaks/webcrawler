@@ -73,6 +73,10 @@ public abstract class Cipher extends Application{
         root.setAlignment(Pos.CENTER);
         root.getChildren().addAll(inputComponent,en,display);
 
+        Scene scene = new Scene(root,800,700);
+        stage.setScene(scene);
+        stage.setTitle("cipher");
+        stage.show();
 
 
     }
