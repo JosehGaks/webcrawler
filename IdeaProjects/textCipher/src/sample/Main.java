@@ -49,6 +49,18 @@ public abstract class Cipher extends Application{
         //encrypt button
         Button en = new Button();
         en.setText("encrypt");
+        en.setOnAction(e ->
+        {
+            if(inputText.getText().isEmpty() || key.getText().isEmpty()) {
+                display.setText("Text and key must be entered");
+            }
+            else {
+                encript.setInput(inputText.getText());
+                encript.setKey(Integer.parseInt(key.getText()));
+
+                display.setText(encript.encrypt());
+            }
+        });
 
     }
 }
