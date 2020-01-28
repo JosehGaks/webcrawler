@@ -39,6 +39,13 @@ public abstract class Cipher extends Application{
         //label
         Label keyLabel = new Label("key");
         inputLabel.setFont(Font.font("Arial", 20));
+
+        //display textarea
+        TextArea display = new TextArea();
+        display.setEditable(false);
+        display.setMinSize(500,100);
+        display.setMaxSize(500,100);
+
     }
 }
 
