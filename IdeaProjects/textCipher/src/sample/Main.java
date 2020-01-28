@@ -26,7 +26,9 @@ public abstract class Cipher extends Application{
         inputText.setMaxSize(500,100);
         inputText.setPromptText("Enter text here");
 
-
+        //label
+        Label inputLabel = new Label("input");
+        inputLabel.setFont(Font.font("Arial", 20));
     }
 }
 
