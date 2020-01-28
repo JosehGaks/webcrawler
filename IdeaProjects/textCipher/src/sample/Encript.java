@@ -1,4 +1,6 @@
 package sample;
 
-public class Encript {
+class Encript {
+    private String inputText;
+    private int key;
 }
