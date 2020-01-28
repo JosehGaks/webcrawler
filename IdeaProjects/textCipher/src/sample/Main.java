@@ -67,6 +67,13 @@ public abstract class Cipher extends Application{
         inputComponent.setAlignment(Pos.CENTER);
         inputComponent.getChildren().addAll(inputLabel,inputText,key,keyLabel);
 
+        //vbox
+        VBox root = new VBox(25);
+        root.setBackground(Background.EMPTY);
+        root.setAlignment(Pos.CENTER);
+        root.getChildren().addAll(inputComponent,en,display);
+
+
 
     }
 }
