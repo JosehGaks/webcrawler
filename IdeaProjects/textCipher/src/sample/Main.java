@@ -14,7 +14,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-public class Cipher extends Application{}
+public abstract class Cipher extends Application{
+    private Encript encript = new Encript("", 0);
+}
 
 public static void main(String[] args) {
 
