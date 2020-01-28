@@ -61,7 +61,20 @@ public abstract class Cipher extends Application{
                 display.setText(encript.encrypt());
             }
         });
+        Button de = new Button();
+        de.setText("encrypt");
+        de.setOnAction(e ->
+        {
+            if(inputText.getText().isEmpty() || key.getText().isEmpty()) {
+                display.setText("Text and key must be entered");
+            }
+            else {
+                encript.setInput(inputText.getText());
+                encript.setKey(Integer.parseInt(key.getText()));
 
+                display.setText(encript.decrypt());
+            }
+        });
         //HBox
         HBox inputComponent = new HBox(10);
         inputComponent.setAlignment(Pos.CENTER);
@@ -71,7 +84,7 @@ public abstract class Cipher extends Application{
         VBox root = new VBox(25);
         root.setBackground(Background.EMPTY);
         root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(inputComponent,en,display);
+        root.getChildren().addAll(inputComponent,en,de,display);
 
         Scene scene = new Scene(root,800,700);
         stage.setScene(scene);
