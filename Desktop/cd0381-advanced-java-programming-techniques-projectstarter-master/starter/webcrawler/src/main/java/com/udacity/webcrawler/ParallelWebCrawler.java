@@ -48,13 +48,10 @@ final class ParallelWebCrawler implements WebCrawler {
     ConcurrentHashMap<String, Integer> counts = new ConcurrentHashMap<>();
     ConcurrentSkipListSet<String> visitedUrls = new ConcurrentSkipListSet<>();
 
-
     for (String url:
             startingUrls) {
-      pool.execute(new CustomTask(url,deadline,maxDepth,counts, visitedUrls,ignoredUrls, clock, parserFactory));
+      pool.invoke(new CustomTask(url,deadline,maxDepth,counts, visitedUrls,ignoredUrls, clock, parserFactory));
     }
-
-
 
     if (counts.isEmpty()) {
       return new CrawlResult.Builder()

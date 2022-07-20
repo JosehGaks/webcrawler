@@ -24,7 +24,14 @@ public class CustomTask extends RecursiveAction {
     private final List<Pattern> ignoredUrls;
     private final Clock clock;
     private final PageParserFactory parserFactory;
-    public CustomTask(String url, Instant deadline, Integer maxDepth, ConcurrentHashMap<String, Integer> counts, ConcurrentSkipListSet<String> visitedUrls, List<Pattern> ignoredUrls, Clock clock, PageParserFactory parserFactory) {
+    public CustomTask(String url,
+                      Instant deadline,
+                      Integer maxDepth,
+                      ConcurrentHashMap<String, Integer> counts,
+                      ConcurrentSkipListSet<String> visitedUrls,
+                      List<Pattern> ignoredUrls,
+                      Clock clock,
+                      PageParserFactory parserFactory) {
         this.url = url;
         this.deadline = deadline;
         this.maxDepth = maxDepth;
@@ -60,7 +67,7 @@ public class CustomTask extends RecursiveAction {
 
         List<CustomTask> subtasks = new ArrayList<>();
         result.getLinks().forEach(
-                url -> subtasks.add(new CustomTask(url,deadline,maxDepth-1, counts, visitedUrls, ignoredUrls, clock, parserFactory))
+                url -> subtasks.add(new CustomTask(url,deadline,maxDepth - 1, counts, visitedUrls, ignoredUrls, clock, parserFactory))
         );
         invokeAll(subtasks);
     }
