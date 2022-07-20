@@ -50,7 +50,7 @@ public final class WebCrawlerMain {
       resultWriter.write(Path.of(config.getProfileOutputPath()));
     }else{
       try(Writer writer = new OutputStreamWriter(System.out)) {
-        resultWriter.write(writer);
+        profiler.writeData(writer);
       }
     }
   }
